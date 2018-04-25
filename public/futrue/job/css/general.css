@@ -1,0 +1,130 @@
+a:link 		{color: #000000; text-decoration: underline;}
+a:visited	{color: #000000; text-decoration: underline;}
+a:hover		{color: #FF0000; text-decoration: none;}
+a:active	{color: #FF0000; text-decoration: none;}
+
+#header {
+	margin: 0px auto auto;
+	color: #000000;
+	padding: 0px;
+	text-align: left;
+}
+#general {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 20px;
+	color: #333333;
+
+	margin: auto auto 30px;
+	text-align: center;
+	text-align: left;
+	padding: 10px;
+	border: 5px double #efefef;
+	height: 80px;
+}
+#objective {
+	font-size: 21px;
+	font-family: "楷体";
+	margin: auto auto 10px;
+	padding: 10px;
+	text-align: left;
+	border: 5px double #efefef;
+}
+#skillareas {
+	margin: auto auto 10px;
+	padding: 10px;
+	border: 5px double #efefef;
+	text-align: left;
+}
+#history {
+	margin: auto auto 10px;
+
+	padding: 10px;
+	border: 5px double #efefef;
+	text-align: left;
+}
+#awards {
+	margin: auto;
+	padding: 10px;
+	border: 5px double #efefef;
+	text-align: left;
+}
+#lastModified {
+	margin: 10px auto auto;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: #666666;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #efefef;
+}
+#copyright {
+	margin: auto;
+	padding: 0px;
+	color: #666666;
+}
+h1 {
+	font-size: 18px;
+	color: #FF0000;
+	font-weight: bolder;
+}
+h2 {
+	font-size: 16px;
+}
+h3 {
+	font-size: 16px;
+}
+#objective h2 {
+	width: 100%;
+	color: #FFFFFF;
+	background-color: #66CC00;
+	margin: 0px;
+	padding: 2px;
+	font-weight: normal;
+}
+#skillareas h2 {
+	background-color: #39a6c6;
+	color: #FFFFFF;
+	padding: 2px;
+	margin: 0px;
+	font-weight: normal;
+}
+#history h2 {
+	color: #FFFFFF;
+	background-color: #999900;
+	padding: 2px;
+	font-weight: normal;
+}
+#awards h2 {
+	color: #FFFFFF;
+	background-color: #FF3399;
+	padding: 2px;
+	font-weight: normal;
+}
+.row {
+	width: 320px;
+	float: left;
+}
+#objective p {
+	padding: 2px;
+	margin: 0px;
+}
+.skillset li{
+	margin-bottom: 33px;
+	margin-top: 22px;
+	list-style:square inside url("/futrue/ico/avatar.png");
+}
+.skillset li a{
+font-size: 18px;
+	color: blue;
+	text-decoration: none;
+
+}
+.only{
+	color: grey;
+	font-size: 17px;
+}
+.age{
+	color: grey;
+	font-size: 17px;
+}

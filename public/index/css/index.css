@@ -1,0 +1,30 @@
+.con{
+    background-color: red;
+    height: 200px;
+    width: auto;
+}
+.breadcrumb{
+    background-color:#cc5924;
+    font-size: 20px;
+    color: #000;
+text-align: center;
+}
+.breadcrumb:hover{
+    font-size:21px;
+    color:yellow;
+}
+.user{
+   position: fixed;
+    right: 20px;
+font-size: 20px;
+    color: red;
+}
+.user:hover{
+    color:red;
+    font-size: 24px;
+}
+
+.carousel-inner img {
+    width: 500px;
+    height: 300px   ;
+}

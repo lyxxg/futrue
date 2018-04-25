@@ -1,0 +1,92 @@
+// 浮窗预览背景
+$(function(){
+
+	function getBackgroundImage(el) {
+		return el[0].style.backgroundImage.replace(/\(|\)|"|url/g, '');
+	}
+
+	function changeBackgroundImage(bgurl) {
+		document.getElementById('preview').style.background='url('+bgurl+')';
+	}
+
+	function changeDownloadLink(downloadurl) {
+		$("#preview a").attr('href', downloadurl);
+	}	
+
+	var backgroundImageList = [], currentIndex = null;
+
+	$('.box_btn').each(function(index){
+		$(this).attr('picindex', index);
+		var savepic = $(this).find('a').attr('href');
+		//console.log('savepic:' + savepic);
+		backgroundImageList.push( {'img' : getBackgroundImage($(this)), 'savepic' : savepic} );
+	});
+		
+  $('.box_btn').click(function(){
+	    currentIndex = parseInt($(this).attr('picindex'));
+	    changeBackgroundImage(backgroundImageList[currentIndex]['img']);
+	    changeDownloadLink(backgroundImageList[currentIndex]['savepic']);
+ 		  
+        $.blockUI({ 
+            message: $('#preview'), 
+            css: { 
+		        top:		'8%',
+		        left:		'50%',
+		        marginLeft:     '-45%', 
+				border:		'8px solid #fff',
+                width: '90%',
+				height: '84%',
+				cursor:		'pointer'
+
+            } 
+        }); 
+
+		
+	 });
+
+	 function changePrevImage() {
+		 if(currentIndex == 0) {
+			 alert('这是第一张，请向后翻~');
+			 return;
+		 }
+		 currentIndex = currentIndex - 1;
+		 changeBackgroundImage(backgroundImageList[currentIndex]['img']);
+		 changeDownloadLink(backgroundImageList[currentIndex]['savepic']);
+	 }
+
+	 function changeNextImage() {
+		 if(currentIndex == backgroundImageList.length - 1) {
+			 alert('最后一张了，请向前翻~');
+			 return;
+		 }
+		 
+		currentIndex = currentIndex + 1;
+		changeBackgroundImage(backgroundImageList[currentIndex]['img']);
+		changeDownloadLink(backgroundImageList[currentIndex]['savepic']);
+	 }
+
+	$(document).keydown(function(event){
+	  	if(event.which ==  37) {
+		  	changePrevImage();
+	  	}
+
+	  	if(event.which ==  39) {
+		  	changeNextImage();
+	  	}
+	  	
+	});
+
+	$("#preview .prevButton").click(function(event){
+		changePrevImage();
+		event.stopImmediatePropagation();
+	});
+
+	$("#preview .nextButton").click(function(event){
+		changeNextImage();
+		event.stopImmediatePropagation();
+	});	 
+
+	$("#preview .closeButton").click(function(event){
+		$.unblockUI();
+	});	 	
+});	 
