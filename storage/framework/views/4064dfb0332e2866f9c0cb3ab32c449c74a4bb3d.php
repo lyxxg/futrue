@@ -21,14 +21,15 @@
             <li class="skill">
                 <h3>主要技能</h3>
                 <ul class="skillset">
-                    <li>PHP Laravel 队列 缓存 文件缓存 <a href="<?php echo e(asset('article')); ?>">此站</a>就是<span class="only">本人独自花费3个多月</span>使用这些技术完成的</li>
+                    <li>PHP Laravel 队列 缓存 文件缓存 <a href="<?php echo e(asset('article')); ?>">此站</a>就是<span class="only">本人独自花费3个多月</span>使用这些技术完成的
+                        项目<a href="https://coding.net/u/lyxxxh/p/futrue/git?public=true">地址</a></li>
                     <li>HTTP协议 用http刷<a href="https://www.bilibili.com/video/av19942924">哔哩哔哩评论</a> </li>
                     <li>反向ajax聊天室 json xml解析 </li>
                     <li>跨域脚本攻击 xxs sql注入原理</li>
                     <li>微信开发 创建并维护<a href="<?php echo e(route('wechatpublic')); ?>">黑客美学</a></li></li>
                     <li>良好代码书写习惯 习惯使用git</li>
-                    <li>c 目前已靠二级c</li>
-                    <li>Linux操作</li>
+                    <li>c 目前已考二级c</li>
+                    <li>Linux操作 熟练配置站点端口</li>
                     <li>H5离线缓存---此站主题 websql等 css js perl</li>
                     <li>在校学过sqlserver ps</li>
 
@@ -53,7 +54,7 @@
                 <h3>热爱编程 几乎时间都是打代码</h3>
                 <div class="date">学历虽然低了  但是技术不是很低</div>
                 <div class="date">能吃苦耐劳，学习能力强</div>
-
+                <div class="date"><a href="<?php echo e(route('contactme')); ?>" style="color: blue">联系我</a> qq:449399575</div>
             </li>
         </ol>
     </div>
