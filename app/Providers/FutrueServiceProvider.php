@@ -17,14 +17,13 @@ class FutrueServiceProvider extends ServiceProvider
     public function boot()
     {
    //查询公告和热门标签
-        $announcement=\Redis::get("announcement");
+   $announcement=\Redis::get("announcement");
         if($announcement==null){
             $announcement=Announcement::all()->last();
             \Redis::set("announcement",$announcement);
         }
         $announcement=json_decode($announcement);
         $articlehots=Question::all()->sortByDesc('view')->take(10);
-
         $futruetags=\Redis::get("futruetags");
         if($futruetags==null){
             $futruetags=Tag::all();
@@ -33,7 +32,7 @@ class FutrueServiceProvider extends ServiceProvider
         $futruetags=json_decode($futruetags);
         view()->share("futruetags",$futruetags);
         view()->share('announcement',$announcement);
-        view()->share('questionhots',$articlehots);
+        view()->share('questionhots',$articlehots);    
 
  }
 

@@ -45,6 +45,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','as'=>'admin.','middleware'
     Route::resource("banneduser","BanneduserController");//违禁用户
     Route::resource("focus","FocusController");//my_Focus焦点图管理
     Route::resource("feedback","FeedBackController");//反馈
+    Route::resource("roles","UserRolesController");//权限添加或者删除
 });
 Route::group(['prefix'=>'tools'],function () {
 
@@ -58,7 +59,29 @@ Route::group(['prefix'=>'tools'],function () {
     ->name("contactmepost");
 Route::get("jobsearch","Tools\JobSearchController@JobSearch")
     ->name("jobsearch");
+
+Route::get("nmap","Tools\NmapController@Nmap");
+
+
+//微信登录
+Route::get("wxlogin","Tools\WechatController@login");
+
+Route::any("upload","Tools\ExtendedController@Qrscanning");
+
+//二维码上传处理的视图
+Route::get("uploadview","Tools\ExtendedController@QrView");
+
 });
+
+//聊天
+Route::group(['prefix'=>'chat'],function () {
+    Route::get("/","Chat\ChatController@index");
+    Route::post("store","Chat\ChatController@store");
+    Route::get("getmsg","Chat\ChatController@getmsg");
+});
+
+
+
 
 Route::get("useredit","Futrue\UserController@useredit");
 Route::post("answer/accept/{question_id}/{answer_id}","Futrue\AnswerController@accept")
@@ -211,17 +234,12 @@ Route::get("cache1",function(\Illuminate\Http\Request $request){
    echo \Illuminate\Support\Facades\Cache::get('ip');
    // echo "1";
 });
-Route::get("redistest",function (){
-header("Content-Type: text/html; charset=UTF-8");
-  //  \Illuminate\Support\Facades\Cache::store('redis')->put('bar', 'baz', 10);
-    Redis::set('name', 'Taylor');
-echo Redis::get("name");
+
+
+Route::get("test77",function(){
+	echo "77";
+	
 });
 
-    Route::get("mailtest",function (){
-    $name = '学院君';
-    \Illuminate\Support\Facades\Mail::send('mail.test',['name'=>$name],function($message) {
-        $to = '449399575@qq.com';
-        $message->to($to)->subject('测试邮件');
-    });
-});
+
+Route::get("test8","Test\Test1Controller@test");

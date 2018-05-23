@@ -8,7 +8,8 @@
                 <!-- Slide #1 -->
                 <li>
                     <!-- Image -->
-                    <img src="{{"http://127.0.0.1/futrue/public/Storage/".$tag->ico}}" alt="" class="futrue-tag"/>
+                    <img src="{{\Illuminate\Support\Facades\Storage::url($tag->ico)}}" alt="" class="futrue-tag"
+                    style="filter: alpha(opacity=40);opacity: 0.4;"/>
                     <!-- Caption -->
                     <div class="flex-caption">
                         <div class="bor"></div>

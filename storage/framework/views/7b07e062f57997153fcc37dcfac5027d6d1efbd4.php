@@ -62,6 +62,12 @@
                                 </div>
                                 <input type="hidden" name="token" value="" id="tokenfutrue">
                             </form>
+                            <div class="">
+                                <ul class="futrue-loginul">
+    <a href="<?php echo e(route('tools.wxlogin')); ?>">  <li class="fa fa-weixin" style="font-size: 30px;color:green" title="微信登录"></li>
+    </a>
+  </ul>
+                                </div>
                             <a class="btn btn-link" href="<?php echo e(url('/password/reset')); ?>">
                                 忘记密码?
                             </a>
@@ -91,4 +97,4 @@
 
     <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('futrue.layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Futrue.layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

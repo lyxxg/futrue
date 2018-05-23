@@ -28,6 +28,6 @@
 
   <link href="<?php echo e(asset('futrue/style/style2.css')); ?>" rel="stylesheet">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="<?php echo e(asset('futrue/img/favicon/favicon.png')); ?>">
-  <link rel="shortcut icon" href="<?php echo e(asset('futrue/img/favicon/favicon.png')); ?>">
+<link rel="icon" href="<?php echo e(asset('futrue/logo/futruelogo.png')); ?>" mce_href="/dir/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="">
 </head>

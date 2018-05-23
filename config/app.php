@@ -182,7 +182,9 @@ return [
         Mews\Captcha\CaptchaServiceProvider::class,
         App\Providers\FutrueServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-    ],
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -233,6 +235,7 @@ return [
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-    ],
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        ],
 
 ];

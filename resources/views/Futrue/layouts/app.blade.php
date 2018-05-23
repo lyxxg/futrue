@@ -33,7 +33,7 @@
 @include("Futrue.particles.foot")
 <!-- JS -->
 <script src="{{asset('futrue/js/jquery.js')}}"></script>
-<script src="{{asset('futrue/js/bootstrap.js')}}"></script> <!-- Bootstrap -->
+<script src="{{asset('futrue/js/b93ootstrap.js')}}"></script> <!-- Bootstrap -->
 <script src="{{asset('futrue/js/imageloaded.js')}}"></script> <!-- Imageloaded -->
 <script src="{{asset('futrue/js/jquery.isotope.js')}}"></script> <!-- Isotope -->
 <script src="{{asset('futrue/js/jquery.prettyPhoto.js')}}"></script> <!-- prettyPhoto -->

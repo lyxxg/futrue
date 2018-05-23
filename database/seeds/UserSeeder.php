@@ -16,6 +16,7 @@ $admin->display_name = '后台管理员'; // optional
 $admin->description  = '具备后台管理的权限'; // optional
 $admin->save();
 
+//还需要什么权限吗。。。无语  就我一个管理员  就来个赋值权限得了
 
 $role1 = new \App\Models\Role();
 $role1->name = "user";
@@ -43,10 +44,8 @@ $user->attachRole($admin);
 $manageQuestion = new \App\Models\Permission();
 $manageQuestion->name         = 'admin';
 $manageQuestion->display_name = '后台管理'; // optional
-
 $manageQuestion->description  = '具备后台管理权限'; // optional
 $manageQuestion->save();
-
 //把权限分配给某个角色
 $admin->attachPermission($manageQuestion);
 

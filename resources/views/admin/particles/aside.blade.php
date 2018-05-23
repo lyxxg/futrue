@@ -110,7 +110,7 @@
                     <li><a href="{{route('admin.user.index')}}"><i class="fa fa-user"></i>用户</a></li>
                     <li><a href=""><i class="fa fa-user-circle"></i>高级用户</a></li>
                     <li><a href="{{route('admin.banneduser.index')}}"><i class="fa fa-user-times"></i>违规用户</a></li>
-                    <li><a href="pace.html"><i class="fa fa-users"></i> 管理员</a></li>
+                    <li><a href="{{route('admin.roles.index')}}"><i class="fa fa-users"></i> 管理员</a></li>
                 </ul>
             </li>
 

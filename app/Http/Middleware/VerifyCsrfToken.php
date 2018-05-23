@@ -17,6 +17,8 @@ class VerifyCsrfToken extends Middleware
         "bad",
        "app/check",
         "auth",
+        "upload",
+         "tools/upload"
 
-    ];
+        ];
 }

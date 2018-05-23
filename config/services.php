@@ -34,5 +34,11 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'github' => [
+        'client_id' => 'wx8a1a99b2d34a0766',
+        'client_secret' => 'bdce738b6ac4aea06d9d965b5f4bb6b5',
+        'redirect' => 'http://lmx.ngrok.xiaomiqiu.cn/',
+    ],
+
 
 ];

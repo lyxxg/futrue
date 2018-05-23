@@ -24,7 +24,7 @@ class CreateUserInfosTable extends Migration
             $table->unsignedInteger('sex')->default("3")->comment("0女  1男 3保密");
             $table->timestamps();
             $table->foreign("user_id")->references('id')->on('users');
-            $table->foreign("collection_id")->references('id')->on('questions');
+       //     $table->foreign("collection_id")->references('id')->on('questions');
         });
     }
 

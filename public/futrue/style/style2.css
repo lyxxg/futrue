@@ -231,3 +231,10 @@ text-shadow: 1px 3px grey;
     font-size: 15px;
 color: black;
 }
+
+
+.futrue-loginul li{
+    margin-right: 101px;
+    text-align: center;
+    position: center;
+}
