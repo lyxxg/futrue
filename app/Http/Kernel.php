@@ -60,5 +60,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'banneduser'=>\App\Http\Middleware\Banneduser::class,
+        'cachemlddlewarekey' => \Flc\Laravel\Http\Middleware\CacheResponse::class,
     ];
 }

@@ -18,6 +18,7 @@ class CreateBannedusersTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('object_user_id');//管理员的id
+            $table->string('content')->default('违反规定');//禁言理由
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('object_user_id')->references('id')->on('users');
             $table->timestamps();

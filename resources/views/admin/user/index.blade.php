@@ -15,18 +15,7 @@
     <section class="content">
 
         <!-- Default box -->
-        <div class="box">
-            <div class="box-header with-border">
-                <h3 class="box-title">用户</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                            title="收起">
-                        <i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="关闭">
-                        <i class="fa fa-times"></i></button>
-                </div>
-            </div>
 
             <div class="box-body">
 
@@ -54,18 +43,33 @@
                                 </a>
                             </td>
                             <td>
-                                <img src="11{{$user->avatar}}">
+                                <img src="{{Storage::url($user->info->avatar)}}" width="30px">
 
                             </td>
 
                             <td title="积分:{{$user->info->coins}}">{{$user->info->coins}}</td>
                             <td>
+                   @if(!in_array($user->id,$bannedarr))
                                 <a href="#" class="btn btn-danger btn-sm btn-del" title="小黑屋">小黑屋</a>
-                                <form onsubmit="return confirm('您是否确定要撤销该文章？')" action="{{route('admin.banneduser.destroy',$user->id)}}" method="post">
+                                <form onsubmit="return confirm('您是否确定要将该用户加入小黑屋')" action="{{route('admin.banneduser.destroy',$user->id)}}" method="post">
                                     {{csrf_field()}}
                                     {{method_field('delete')}}
                                 </form>
 
+                                @else
+                                    <a href="#" class="btn btn-primary btn-sm btn-del" title="放出小黑屋">放出小黑屋</a>
+                                    <form onsubmit="return confirm('您是否确定要将该用户放出小黑屋?')" action="{{route('admin.banneduser.destroy',$user->id)}}"  method="post">
+                              <input type="hidden" value="1" name="status">
+                                        {{csrf_field()}}
+                                        {{method_field('delete')}}
+                                    </form>
+                                @endif
+                       <a href="#" class="btn btn-primary btn-sm btn-add" title="添加到管理员">添加到管理员</a>
+                       <form onsubmit="return confirm('您是否确定要将该用户添加到管理员')" action="{{route('admin.roles.store',$user->id)}}"  method="post">
+                           {{csrf_field()}}
+                      <input type="hidden" value="{{$user->id}}" name="user_id">
+                           {{method_field('post')}}
+                       </form>
 
                             </td>
 
@@ -91,6 +95,12 @@
                     });
                 });
 
+
+                $(function () {
+                    $(".btn-add").click(function () {
+                        $(this).siblings("form:last").submit();
+                    })
+                })
 
 
             </script>

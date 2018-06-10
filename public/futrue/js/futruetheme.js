@@ -17,8 +17,8 @@ if(background!=null){
     $(".futrue-li").css("color","black");
     $(".entry>h2>a").css("color","black");
     $(".meta>*").css("color","black");
-    $(".col-l").css("color","red");
-    $(".span4 a").css("color","red");
+    $(".col-l").css("color","black");
+    $(".span4 a").css("color","black");
 
 }
 //10   10---10   play==10

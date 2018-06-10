@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Futrue;
 
 use App\Http\Requests\attention;
+use App\Models\Banneduser;
 use App\Models\Collection;
 use App\Models\Follow;
 use App\Models\Follower;
@@ -174,7 +175,12 @@ return back();
     }
 
 
+public function banneduser(){
+       $user=Auth::user();
+       $banned=Banneduser::Where("user_id",$user->id)->first();
+return view("banned.index",compact('user','banned'));
 
+}
 
 
 

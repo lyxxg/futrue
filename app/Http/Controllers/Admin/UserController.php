@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\UpdateUserRequest;
+use App\Models\Banneduser;
 use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
@@ -18,8 +19,16 @@ class UserController extends Controller
      */
     public function index()
     {
+        $banneds=Banneduser::all();
+
+        //被关进小黑屋的用户
+        $bannedarr=[];
+        foreach ($banneds as $banned){
+            array_push($bannedarr,$banned->user_id);
+        }
+
         $users = User::paginate(10);
-    return view("admin.user.index", compact('users'));
+        return view("admin.user.index", compact('users','bannedarr'));
     }
 
     /**

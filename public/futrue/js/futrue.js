@@ -49,7 +49,7 @@ function good(obj)
 {
     var answer_id = $(obj).attr("data-answer-id");
     $.ajax({
-        url:'http://127.0.0.1/futrue/public/good',
+        url:'http://127.0.0.1/good',
         type:'post',
         data:{'answer_id':answer_id},
         success:function (arg) {
@@ -80,7 +80,7 @@ function good(obj)
 function bad(obj) {
     var answer_id = $(obj).attr("data-answer-id");
     $.ajax({
-        url:'http://127.0.0.1/futrue/public/bad',
+        url:'http://127.0.0.1/bad',
         type:'post',
         data:{'answer_id':answer_id},
         success:function (arg) {

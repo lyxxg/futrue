@@ -61,13 +61,7 @@
                     <div class="post-foot well">
                         <!-- Social media icons -->
                         <div class="social">
-
-                            <a class="jiathis_button_cqq"><i class="fa fa-qq"></i></a>
-                            <a class="jiathis_button_weixin"><i class="fa fa-wechat"></i></a>
-                            <a class="jiathis_button_qzone"><i class="fa fa-star"></i></a>
-
-
-                            <a href="#"><i class="icon-google-plus google-plus"></i></a>
+                            <div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到QQ空间" class="bshare-qzone" href="javascript:void(0);"></a><a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a><a title="分享到微分享" class="bshare-mweibo" href="javascript:void(0);"></a><a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count" style="float: none;">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
                         </div>
                     </div>
 

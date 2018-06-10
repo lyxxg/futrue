@@ -40,11 +40,11 @@
                             <div class="meta">
                                 <a href="{{route('user.index',['user_id'=>$article->user->id])}}">
                                     <img src="{{\Illuminate\Support\Facades\Storage::url($article->user->info->avatar)}}" class="futrue-avatar"
-                                         title="点击查看{{$article->user->name}}的资料">
+                                         title="点击查看{{$article->user->info->nick}}的资料">
                                 </a>
                                 <a href="{{route('user.index',['user_id'=>$article->user->id])}}" title="点击查看{{$article->user->name}}的资料">
                                     <i class="fa fa-user" ></i>
-                                    {{$article->user->name}}
+                                    {{$article->user->info->nick}}
 
                                 </a>
                                 @foreach($article->tags as $tag)

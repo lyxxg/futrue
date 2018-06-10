@@ -33,7 +33,7 @@
 <?php echo $__env->make("Futrue.particles.foot", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <!-- JS -->
 <script src="<?php echo e(asset('futrue/js/jquery.js')); ?>"></script>
-<script src="<?php echo e(asset('futrue/js/bootstrap.js')); ?>"></script> <!-- Bootstrap -->
+<script src="<?php echo e(asset('futrue/js/b93ootstrap.js')); ?>"></script> <!-- Bootstrap -->
 <script src="<?php echo e(asset('futrue/js/imageloaded.js')); ?>"></script> <!-- Imageloaded -->
 <script src="<?php echo e(asset('futrue/js/jquery.isotope.js')); ?>"></script> <!-- Isotope -->
 <script src="<?php echo e(asset('futrue/js/jquery.prettyPhoto.js')); ?>"></script> <!-- prettyPhoto -->

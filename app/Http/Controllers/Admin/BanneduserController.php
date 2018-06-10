@@ -83,10 +83,23 @@ class BanneduserController extends Controller
      */
     public function destroy($user_id)
     {
+
+        //放出小黑屋
+    if(request()->status==1)
+    {
+        Banneduser::Where('user_id',$user_id)->delete();
+return back();
+    exit();
+    }
+
+    //加入小黑屋
     $baddeduser=new Banneduser();
     $baddeduser->user_id=$user_id;
     $baddeduser->object_user_id=Auth::id();
     $baddeduser->save();
+   return back();
     }
+
+
 
 }

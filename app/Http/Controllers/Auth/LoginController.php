@@ -45,10 +45,13 @@ class LoginController extends Controller
 
     public function authenticate()
     {
+
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             // 认证通过...
             return redirect()->intended('dashboard');
         }
+
+
     }
 
 
@@ -87,6 +90,9 @@ class LoginController extends Controller
                 'password.required' =>'密码不能为空',
                 //'captcha.captcha' =>"验证码错误"
             ]);
+
+
+
 
         }else{
     echo "验证码失败";

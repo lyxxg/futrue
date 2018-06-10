@@ -23,7 +23,7 @@ border:solid 0px red;
 }
 .goodandbad i{
     margin-right: 20px;
-    cursor: move;
+    cursor:url('http://127.0.0.1/futrue/ico/lkj.png'),auto;
 }
 .goodandbad i:hover{
     -webkit-transform: scale(1.4);
@@ -237,4 +237,8 @@ color: black;
     margin-right: 101px;
     text-align: center;
     position: center;
+}
+ul li a:hover{
+    color: black;
+font-weight: bold;
 }

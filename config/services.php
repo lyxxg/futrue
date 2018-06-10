@@ -34,11 +34,17 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-    'github' => [
+    'weixin' => [
         'client_id' => 'wx8a1a99b2d34a0766',
         'client_secret' => 'bdce738b6ac4aea06d9d965b5f4bb6b5',
-        'redirect' => 'http://lmx.ngrok.xiaomiqiu.cn/',
+        'redirect' => 'http://lmx.ngrok.xiaomiqiu.cn',
+
+        # 这一行配置非常重要，必须要写成这个地址。
+        'auth_base_uri' => 'https://open.weixin.qq.com/connect/qrconnect',
     ],
+
+
+
 
 
 ];

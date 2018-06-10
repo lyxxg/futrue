@@ -114,19 +114,6 @@
                 </ul>
             </li>
 
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-edit"></i> <span>错误界面编辑</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> 404</a></li>
-                    <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> 403</a></li>
-                    <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> 500</a></li>
-                </ul>
-            </li>
 
 
         </ul>

@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Permission;
 use App\Models\Role;
-use App\User;
+use App\Models\Role_user;
+use \App\Models\User;
+use \Illuminate\Support\Facades;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Zizaco\Entrust\Entrust;
 
 class UserRolesController extends Controller
 {
@@ -17,9 +20,16 @@ class UserRolesController extends Controller
      */
     public function index()
     {
-        $roles=User::all();//权限管理
-   //     $permissions=Permission::all();//所有权限
-        return view("admin.roles.index");
+        $roles=Role_user::all();
+
+        //被关进小黑屋的用户
+        $rolearr=[];
+        foreach ($roles as $role){
+            array_push($rolearr,$role->user_id);
+        }
+
+        $users = \App\Models\User::paginate(10);
+        return view("admin.roles.index", compact('users','rolearr'));
     }
 
     /**
@@ -40,7 +50,19 @@ class UserRolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+$user_id=$request->user_id;
+//$user=User::find($user_id);
+if(Facades\Auth::user()->hasRole('admin')){
+//如果当前登录用户权限是admin
+$admin=new Role_user();
+$admin->user_id=$user_id;
+$admin->role_id=1;
+$admin->save();
+    //attachRole
+    return back();
+}
+echo "别搞事情 我害怕";
+
     }
 
     /**
@@ -85,6 +107,14 @@ class UserRolesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(Facades\Auth::user()->hasRole('admin')) {
+            Role_user::Where("user_id",$id)->delete();
+                        return redirect()->route('admin.roles.index');
+        }            //
+        echo "别搞事情 我害怕";
     }
+
+
+
+
 }

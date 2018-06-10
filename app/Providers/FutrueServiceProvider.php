@@ -17,6 +17,7 @@ class FutrueServiceProvider extends ServiceProvider
     public function boot()
     {
    //查询公告和热门标签
+        $test=new \Redis();
    $announcement=\Redis::get("announcement");
         if($announcement==null){
             $announcement=Announcement::all()->last();

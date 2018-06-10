@@ -43,7 +43,7 @@
                         <h6>工具</h6>
                         <ul>
                             <li><a href="{{route('blbl')}}">b站封面获取</a></li>
-                            <li><a href="#">端口扫描</a></li>
+                            <li><a href="{{route('qrview')}}">二维码识别</a></li>
                             <li><a href="#">暂无</a></li>
                             <li><a href="#">暂无</a></li>
                             <li><a href="#">暂无</a></li>

@@ -40,11 +40,11 @@
                             <div class="meta">
                                 <a href="<?php echo e(route('user.index',['user_id'=>$article->user->id])); ?>">
                                     <img src="<?php echo e(\Illuminate\Support\Facades\Storage::url($article->user->info->avatar)); ?>" class="futrue-avatar"
-                                         title="点击查看<?php echo e($article->user->name); ?>的资料">
+                                         title="点击查看<?php echo e($article->user->info->nick); ?>的资料">
                                 </a>
                                 <a href="<?php echo e(route('user.index',['user_id'=>$article->user->id])); ?>" title="点击查看<?php echo e($article->user->name); ?>的资料">
                                     <i class="fa fa-user" ></i>
-                                    <?php echo e($article->user->name); ?>
+                                    <?php echo e($article->user->info->nick); ?>
 
 
                                 </a>
