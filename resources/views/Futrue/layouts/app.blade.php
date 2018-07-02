@@ -18,7 +18,7 @@
     @include("Futrue.particles.sidebar")
   <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >Website Template</a></div>
   <!-- Mainbar starts -->
-  <div class="mainbar">
+  <div class="mainbar" style="background-color: #ecf0f5">
       @section("content")
     <div class="matter">
       <div class="container-fluid">

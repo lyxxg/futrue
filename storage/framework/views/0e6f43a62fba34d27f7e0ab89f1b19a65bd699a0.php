@@ -34,6 +34,8 @@
 
                 <div class="posts">
 
+
+
                     <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="entry">
                             <h2><a href="#"><?php echo e($article->title); ?></a></h2>

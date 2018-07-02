@@ -18,7 +18,7 @@
     <?php echo $__env->make("Futrue.particles.sidebar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >Website Template</a></div>
   <!-- Mainbar starts -->
-  <div class="mainbar">
+  <div class="mainbar" style="background-color: #ecf0f5">
       <?php $__env->startSection("content"); ?>
     <div class="matter">
       <div class="container-fluid">

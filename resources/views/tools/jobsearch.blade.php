@@ -22,7 +22,7 @@
             <li class="skill">
                 <h3>主要技能</h3>
                 <ul class="skillset">
-                    <li>精通larvel/ PHP/redis /熟悉thinkphp
+                    <li>熟练larvel/ PHP/redis /熟悉thinkphp
                           <a href="{{asset('article')}}"  target="_blank">此站</a>就是本人独自花费3个多月使用Laravel编写的的
                         此项目<a href="https://coding.net/u/lyxxxh/p/futrue/git?public=true"  target="_blank">地址</a></li>
                     <li>熟练使用HTTP协议 使用http模仿<a href="https://www.bilibili.com/video/av19942924"  target="_blank">哔哩哔哩评论</a> </li>

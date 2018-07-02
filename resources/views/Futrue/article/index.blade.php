@@ -34,6 +34,8 @@
 
                 <div class="posts">
 
+
+
                     @foreach($articles as $article)
                         <div class="entry">
                             <h2><a href="#">{{$article->title}}</a></h2>

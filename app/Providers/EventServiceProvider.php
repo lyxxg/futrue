@@ -14,14 +14,22 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
-            'App\Listeners\ArticleCreateListener',//文章创建触发的事件
-        ],
+//        'App\Events\Event' => [
+//            //'App\Listeners\EventListener',
+//       //     'App\Listeners\ArticleCreateListener',//文章创建触发的事件
+//     //       'App\Listeners\LoginListener'
+//        ],
+
+        'App\Events\LoginEvent' => [
+            'App\Listeners\LoginListener'
+        ]
     ];
 
+
     protected $subscribe = [
-        QuestionViewListener::class
+        QuestionViewListener::class,
+       /// LoginListener::class
+
     ];
 
     /**

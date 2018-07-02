@@ -2,11 +2,13 @@
 
 namespace App\Listeners;
 
-use App\Events\Event;
+use App\Events\LoginEvent;
+use App\Models\LoginLog;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Auth;
 
-class ArticleCreateListener
+class LoginListener
 {
     /**
      * Create the event listener.
@@ -15,17 +17,18 @@ class ArticleCreateListener
      */
     public function __construct()
     {
-        //文章创建后
+        //
     }
 
     /**
      * Handle the event.
      *
-     * @param  Event  $event
+     * @param  LoginEvent  $event
      * @return void
      */
-    public function handle(Event $event)
+    public function handle(LoginEvent $event)
     {
-        //
-    }
+        $user_id=Auth::id();
+
+    //    dd("tset");0
 }

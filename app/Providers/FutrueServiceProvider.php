@@ -18,7 +18,7 @@ class FutrueServiceProvider extends ServiceProvider
     {
    //查询公告和热门标签
         $test=new \Redis();
-   $announcement=\Redis::get("announcement");
+       $announcement=\Redis::get("announcement");
         if($announcement==null){
             $announcement=Announcement::all()->last();
             \Redis::set("announcement",$announcement);
@@ -33,7 +33,7 @@ class FutrueServiceProvider extends ServiceProvider
         $futruetags=json_decode($futruetags);
         view()->share("futruetags",$futruetags);
         view()->share('announcement',$announcement);
-        view()->share('questionhots',$articlehots);    
+        view()->share('questionhots',$articlehots);
 
  }
 

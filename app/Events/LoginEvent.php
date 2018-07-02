@@ -10,7 +10,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class Event
+class LoginEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -19,8 +19,13 @@ class Event
      *
      * @return void
      */
-    public function __construct()
+    public  $status;
+    public function __construct($status)
     {
+		
+		
+		
+		$this->status=$status;
         //
     }
 
@@ -31,6 +36,7 @@ class Event
      */
     public function broadcastOn()
     {
+
         return new PrivateChannel('channel-name');
     }
 }
